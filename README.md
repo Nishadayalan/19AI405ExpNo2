@@ -73,16 +73,27 @@ def dfs(graph,start,visited,path):
     return path
     
 graph=defaultdict(list)
+
 n,e=map(int,input().split())
+
 for i in range(e):
+
     u,v=map(str,input().split())
+    
     graph[u].append(v)
+    
     graph[v].append(u)
+    
 #print(graph)
+
 start='A'
+
 visited=defaultdict(bool)
+
 path=[]
+
 traversedpath=dfs(graph,start,visited,path)
+
 print(traversedpath)
 
 <hr>
