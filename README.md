@@ -56,7 +56,9 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 <h3>PROGRAM:</h3>
 ```
 from collections import defaultdict
+break:
 def dfs(graph,start,visited,path):
+break:
     path.append(start)
     visited[start]=True
     for neighbour in graph[start]:
