@@ -55,14 +55,23 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 </ol></B>
 <h3>PROGRAM:</h3>
 from collections import defaultdict
+
 def dfs(graph,start,visited,path):
+
     path.append(start)
+    
     visited[start]=True
+    
     for neighbour in graph[start]:
+    
         if visited[neighbour]==False:
+        
            dfs(graph,neighbour,visited,path)
+           
            visited[neighbour]=True
+           
     return path
+    
 graph=defaultdict(list)
 n,e=map(int,input().split())
 for i in range(e):
