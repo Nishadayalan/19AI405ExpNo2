@@ -53,11 +53,12 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
  <li>Find its Successors Or neighbors and Check whether the node is visited or not</li>
  <li>If Not Visited, add it to the STACK. Else Call The Function Again Until No more nodes needs to be visited.</li>
 </ol></B>
-<h3>PROGRAM:</h3>
+
+###PROGRAM:
+
+```
 from collections import defaultdict
-break:
 def dfs(graph,start,visited,path):
-break:
     path.append(start)
     visited[start]=True
     for neighbour in graph[start]:
@@ -77,7 +78,10 @@ visited=defaultdict(bool)
 path=[]
 traversedpath=dfs(graph,start,visited,path)
 print(traversedpath)
+```
+
 <h3>SAMPLE INPUT</h3>
+<hr>
 8 9 <BR>
 A B <BR>
 A C <BR>
@@ -89,9 +93,12 @@ D F <BR>
 G F <BR>
 F H <BR>
 <h3>Sample Output:</h3>
+<hr>
 
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
-<h3>PROGRAM:</h3>
+
+###PROGRAM:
+
 ```
 from collections import defaultdict
 def dfs(g,s,vi,p):
@@ -112,7 +119,8 @@ st=input()
 vi=defaultdict(bool)
 p=[]
 tdp=dfs(g,st,vi,p)
-print(tdp)```
+print(tdp)
+```
 
 <h3>Sample Input</h3>
 <hr>
