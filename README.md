@@ -77,8 +77,7 @@ path=[]
 traversedpath=dfs(graph,start,visited,path)
 print(traversedpath)
 ```
-### Sample Input
-```
+### Sample Input:
 8 9 <BR>
 A B <BR>
 A C <BR>
@@ -93,8 +92,27 @@ F H <BR>
 ### Sample Output
 
 ['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
-
-
+###PROGRAM:
+from collections import defaultdict
+def dfs(g,s,vi,p):
+    p.append(s)
+    vi[s]=True
+    for ne in g[s]:
+        if vi[ne]==False:
+             dfs(g,ne,vi,p)
+             vi[ne]=True
+    return p
+g=defaultdict(list)
+n,e=map(int,input().split())
+for i in range(e):
+    u,v=map(str,input().split())
+    g[u].append(v)
+    g[v].append(u)
+st=input()
+vi=defaultdict(bool)
+p=[]
+tdp=dfs(g,st,vi,p)
+print(tdp)
 
 <h3>Sample Input</h3>
 <hr>
